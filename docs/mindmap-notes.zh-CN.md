@@ -9,7 +9,7 @@
 | 中文 | [`src/content/notes/sample-mindmap.md`](../src/content/notes/sample-mindmap.md) | `/notes/sample-mindmap/` |
 | 英文 | [`src/content/note-translations/en/sample-mindmap.md`](../src/content/note-translations/en/sample-mindmap.md) | `/en/notes/sample-mindmap/` |
 
-原文配置 `defaultView: mindmap`，使笔记默认显示导图。英文译文使用 `translationOf: sample-mindmap` 关联原文、继承其默认视图，同时以英文 Markdown 正文生成自己的导图。
+原文归属 `ai` 技术分类，因此也会出现在模板首页的「最近笔记」中，详见[最近笔记指南](home-recent-notes.zh-CN.md)。原文配置 `defaultView: mindmap`，使笔记默认显示导图。英文译文使用 `translationOf: sample-mindmap` 关联原文、继承其默认视图，同时以英文 Markdown 正文生成自己的导图。
 
 ## 本地预览
 
