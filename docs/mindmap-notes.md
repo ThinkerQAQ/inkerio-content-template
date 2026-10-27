@@ -21,7 +21,7 @@ npm run check
 npx --no-install astro dev --port 4321
 ```
 
-Visit [Chinese preview](http://localhost:4321/notes/sample-mindmap/) or [English preview](http://localhost:4321/en/notes/sample-mindmap/). Switch to Markdown, expand branches by clicking nodes, drag/pan, zoom with the wheel or floating toolbar, fit the overview, and use fullscreen. Large maps start with deeper branches folded.
+Visit [Chinese preview](http://localhost:4321/notes/sample-mindmap/) or [English preview](http://localhost:4321/en/notes/sample-mindmap/). The fixed reading-mode switch above the reading-jump control changes **Read / Map** from anywhere on the page and returns to the note start. In the map, expand branches by clicking nodes, drag/pan, zoom with the wheel or the separate canvas toolbar, fit the overview, and use fullscreen. Large maps start with deeper branches folded.
 
 ## Create your own map
 

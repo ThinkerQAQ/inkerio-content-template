@@ -21,7 +21,7 @@ npm run check
 npx --no-install astro dev --port 4321
 ```
 
-访问[中文预览](http://localhost:4321/notes/sample-mindmap/)与[英文预览](http://localhost:4321/en/notes/sample-mindmap/)。可以切回 Markdown，点击节点展开或折叠、拖动画布、滚轮缩放，使用右上角悬浮工具栏进行放大、缩小、全局适配、递归展开控制和全屏。大型导图默认折叠深层级。
+访问[中文预览](http://localhost:4321/notes/sample-mindmap/)与[英文预览](http://localhost:4321/en/notes/sample-mindmap/)。页面右下角在阅读跳转按钮上方提供固定的「正文 / 导图」切换器，滚动阅读时仍可切换，切换后回到笔记正文起点。导图可点击节点展开或折叠、拖动画布、滚轮缩放，并使用画布右上角的独立工具栏进行放大、缩小、全局适配、递归展开控制和全屏。大型导图默认折叠深层级。
 
 ## 复制为自己的导图
 
