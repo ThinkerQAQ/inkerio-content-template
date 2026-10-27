@@ -28,7 +28,7 @@ npx --no-install astro dev --port 4321
 | 路径 | 内容 |
 | --- | --- |
 | `src/content/articles/`、`articles/en/` | 示例文章与英文翻译 |
-| `src/content/notes/`、`note-translations/en/` | 示例笔记与翻译 |
+| `src/content/notes/`、`note-translations/en/` | 示例笔记与翻译，含中英文交互式思维导图 |
 | `src/content/projects/`、`series/` | 项目和系列示例 |
 | `src/content/life/` | 虚构的摄影记录、年份归档与草稿 |
 | `src/content/workout-summaries/` | 虚构的月度健身统计 |
@@ -36,6 +36,10 @@ npx --no-install astro dev --port 4321
 | `public/media/` | 示例封面、摄影原图与缩略图 |
 
 字段定义以 [Inkerio Schema 参考](https://github.com/ThinkerQAQ/ThinkerQAQ.github.io/blob/main/docs/zh-CN/reference/content-schema.md)链接的 TypeScript 实现为准。此仓库是公开演示数据的唯一维护位置，不包含另一套引擎实现。
+
+## 思维导图示例
+
+模板新增了[软件系统设计思维导图](src/content/notes/sample-mindmap.md)及其[英文译文](src/content/note-translations/en/sample-mindmap.md)。装配后可访问 `/notes/sample-mindmap/` 与 `/en/notes/sample-mindmap/`，两种语言均默认进入思维导图，也可以切换回 Markdown。操作方式、配置和复制方法见[思维导图示例指南](docs/mindmap-notes.zh-CN.md)。
 
 ## 演示数据
 

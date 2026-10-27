@@ -28,7 +28,7 @@ For your own writing, use **Use this template** on GitHub or fork the repository
 | Path | Contents |
 | --- | --- |
 | `src/content/articles/`, `articles/en/` | Example articles and English translations |
-| `src/content/notes/`, `note-translations/en/` | Example notes and translations |
+| `src/content/notes/`, `note-translations/en/` | Example notes and translations, including a bilingual interactive mind map |
 | `src/content/projects/`, `series/` | Project and series examples |
 | `src/content/life/` | Fictional photography entries, archives and a draft |
 | `src/content/workout-summaries/` | Fictional monthly workout summaries |
@@ -36,6 +36,10 @@ For your own writing, use **Use this template** on GitHub or fork the repository
 | `public/media/` | Sample covers, photo originals and thumbnails |
 
 The [Inkerio schema reference](https://github.com/ThinkerQAQ/ThinkerQAQ.github.io/blob/main/docs/reference/content-schema.md) links to the actual TypeScript definitions. This template is the single maintenance location for public demo content, not a second engine implementation.
+
+## Mind-map example
+
+The template includes a Chinese [software system design mind map](src/content/notes/sample-mindmap.md) and its [English translation](src/content/note-translations/en/sample-mindmap.md). After assembly, preview `/notes/sample-mindmap/` and `/en/notes/sample-mindmap/`; both open in mind-map mode and allow switching back to Markdown. See the [mind-map sample guide](docs/mindmap-notes.md) for controls, configuration, and how to copy it.
 
 ## Demo data
 
