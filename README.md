@@ -39,7 +39,7 @@ The [Inkerio schema reference](https://github.com/ThinkerQAQ/ThinkerQAQ.github.i
 
 ## Recent notes and knowledge categories
 
-The template now demonstrates the homepage **Recent Notes + Knowledge Categories** layout with two bilingual examples: the AI [interactive mind map](src/content/notes/sample-mindmap.md) and a [database index note](src/content/notes/sample-database-note.md). Both have localized summaries, and both appear in the engineering homepage feed; the original minimal `sample-note.md` remains a separate `example` category note. See the [recent notes guide](docs/home-recent-notes.md) for feed rules and authoring details.
+The homepage now places **Projects → Recent Notes → Engineering Knowledge → Beyond Engineering** in separate sections after the article highlights. Three bilingual examples demonstrate how the recent feed draws from different categories: an AI [interactive mind map](src/content/notes/sample-mindmap.md), a [database index note](src/content/notes/sample-database-note.md), and a [photography note](src/content/notes/sample-photography-note.md). The AI and Database categories appear under Engineering Knowledge; Photography appears under Beyond Engineering. The original minimal `sample-note.md` stays in `example` as an additional schema example. See the [recent-notes guide](docs/home-recent-notes.md).
 
 ## Mind-map example
 

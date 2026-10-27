@@ -39,7 +39,7 @@ npx --no-install astro dev --port 4321
 
 ## 最近笔记与知识分类
 
-模板已支持首页「**最近笔记 + 知识分类**」展示：示例包含 AI 分类的[交互式思维导图](src/content/notes/sample-mindmap.md)和数据库分类的[索引设计笔记](src/content/notes/sample-database-note.md)，均提供中英文简介及正文。原来的最简 `sample-note.md` 仍归属 `example` 分类，不进入首页的技术精选列表。规则与编写方式见[最近笔记指南](docs/home-recent-notes.zh-CN.md)。
+首页文章与系列之后，依次展示独立的「**项目 → 最近笔记 → 技术知识 → 工程之外**」栏目。模板使用三篇中英文示例展示跨分类的最近笔记：AI 分类的[交互式思维导图](src/content/notes/sample-mindmap.md)、数据库分类的[索引设计笔记](src/content/notes/sample-database-note.md)和[摄影笔记](src/content/notes/sample-photography-note.md)。AI、数据库归入「技术知识」，摄影归入「工程之外」。原来的最简 `sample-note.md` 仍属于 `example` 分类。详见[最近笔记指南](docs/home-recent-notes.zh-CN.md)。
 
 ## 思维导图示例
 
