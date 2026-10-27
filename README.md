@@ -37,6 +37,10 @@ For your own writing, use **Use this template** on GitHub or fork the repository
 
 The [Inkerio schema reference](https://github.com/ThinkerQAQ/ThinkerQAQ.github.io/blob/main/docs/reference/content-schema.md) links to the actual TypeScript definitions. This template is the single maintenance location for public demo content, not a second engine implementation.
 
+## Recent notes and knowledge categories
+
+The template now demonstrates the homepage **Recent Notes + Knowledge Categories** layout with two bilingual examples: the AI [interactive mind map](src/content/notes/sample-mindmap.md) and a [database index note](src/content/notes/sample-database-note.md). Both have localized summaries, and both appear in the engineering homepage feed; the original minimal `sample-note.md` remains a separate `example` category note. See the [recent notes guide](docs/home-recent-notes.md) for feed rules and authoring details.
+
 ## Mind-map example
 
 The template includes a Chinese [software system design mind map](src/content/notes/sample-mindmap.md) and its [English translation](src/content/note-translations/en/sample-mindmap.md). After assembly, preview `/notes/sample-mindmap/` and `/en/notes/sample-mindmap/`; both open in mind-map mode and allow switching back to Markdown. See the [mind-map sample guide](docs/mindmap-notes.md) for controls, configuration, and how to copy it.

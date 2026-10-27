@@ -9,7 +9,7 @@ This content template includes two equivalent **software system design** mind-ma
 | Chinese | [`src/content/notes/sample-mindmap.md`](../src/content/notes/sample-mindmap.md) | `/notes/sample-mindmap/` |
 | English | [`src/content/note-translations/en/sample-mindmap.md`](../src/content/note-translations/en/sample-mindmap.md) | `/en/notes/sample-mindmap/` |
 
-The original note contains `defaultView: mindmap`. The English translation uses `translationOf: sample-mindmap` and inherits the default view; the renderer uses the English body for the English map.
+The original note belongs to the `ai` engineering category, so it is also featured on the demo homepage as a recent note; see [recent notes](home-recent-notes.md). It contains `defaultView: mindmap`. The English translation uses `translationOf: sample-mindmap` and inherits the default view; the renderer uses the English body for the English map.
 
 ## Try it locally
 

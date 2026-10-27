@@ -37,6 +37,10 @@ npx --no-install astro dev --port 4321
 
 字段定义以 [Inkerio Schema 参考](https://github.com/ThinkerQAQ/ThinkerQAQ.github.io/blob/main/docs/zh-CN/reference/content-schema.md)链接的 TypeScript 实现为准。此仓库是公开演示数据的唯一维护位置，不包含另一套引擎实现。
 
+## 最近笔记与知识分类
+
+模板已支持首页「**最近笔记 + 知识分类**」展示：示例包含 AI 分类的[交互式思维导图](src/content/notes/sample-mindmap.md)和数据库分类的[索引设计笔记](src/content/notes/sample-database-note.md)，均提供中英文简介及正文。原来的最简 `sample-note.md` 仍归属 `example` 分类，不进入首页的技术精选列表。规则与编写方式见[最近笔记指南](docs/home-recent-notes.zh-CN.md)。
+
 ## 思维导图示例
 
 模板新增了[软件系统设计思维导图](src/content/notes/sample-mindmap.md)及其[英文译文](src/content/note-translations/en/sample-mindmap.md)。装配后可访问 `/notes/sample-mindmap/` 与 `/en/notes/sample-mindmap/`，两种语言均默认进入思维导图，也可以切换回 Markdown。操作方式、配置和复制方法见[思维导图示例指南](docs/mindmap-notes.zh-CN.md)。
