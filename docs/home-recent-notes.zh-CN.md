@@ -2,7 +2,7 @@
 
 [English](home-recent-notes.md) · [返回 README](../README_ZH.md)
 
-Inkerio 首页「**技术知识**」分为两部分：「**最近笔记**」展示具体且近期维护的笔记，「**知识分类**」提供长期、稳定的知识库分类入口。布局和筛选规则由引擎负责，内容模板负责提供双语示例。
+Inkerio 首页在文章和系列展示之后，依次排列「**项目 → 最近笔记 → 技术知识 → 工程之外**」四个平级栏目。**最近笔记**按时间展示所有分类中的近期笔记；「技术知识」与「工程之外」则分别展示技术、非技术分类集合。布局和筛选规则由引擎负责，内容模板提供双语示例。
 
 ## 模板中的双语示例
 
@@ -10,18 +10,19 @@ Inkerio 首页「**技术知识**」分为两部分：「**最近笔记**」展�
 | --- | --- | --- | --- |
 | 可交互思维导图 | [`sample-mindmap.md`](../src/content/notes/sample-mindmap.md) | [`sample-mindmap.md`](../src/content/note-translations/en/sample-mindmap.md) | `ai` |
 | 普通 Markdown 笔记 | [`sample-database-note.md`](../src/content/notes/sample-database-note.md) | [`sample-database-note.md`](../src/content/note-translations/en/sample-database-note.md) | `database` |
+| 工程之外的摄影笔记 | [`sample-photography-note.md`](../src/content/notes/sample-photography-note.md) | [`sample-photography-note.md`](../src/content/note-translations/en/sample-photography-note.md) | `photography` |
 
-装配模板后，首页会展示这两篇笔记的**标题、简介、分类、更新时间**，其下方的知识分类列表则显示 AI 与数据库。原来的 [`sample-note.md`](../src/content/notes/sample-note.md) 保留在 `example` 分类，用来展示最简单的笔记格式；`example` 不属于首页精选的技术分类。
+装配模板后，独立的「最近笔记」栏目展示这三篇内容的**标题、简介、分类和更新时间**。「技术知识」只展示 AI、数据库分类，「工程之外」则展示摄影分类。原来的 [`sample-note.md`](../src/content/notes/sample-note.md) 保留在 `example` 分类，演示最简笔记格式；笔记不需要属于首页精选分类也可以参与最近笔记筛选。
 
-可以访问 `/`、`/en/`、`/notes/sample-mindmap/` 和 `/en/notes/sample-database-note/` 验证展示效果。
+可以访问 `/`、`/en/`、`/notes/sample-mindmap/`、`/en/notes/sample-database-note/` 和 `/en/notes/sample-photography-note/` 验证展示效果。
 
 ## 最近笔记的筛选规则
 
-- 只选 `status: active`、`indexable: true`，且分类存在于引擎首页技术分类配置中的笔记；英文首页还要求存在对应英文译文，并展示英文 `description`。
+- 最近笔记不限技术分类，只要求 `status: active`、`indexable: true`；英文首页还要求对应英文译文，并展示英文 `description`。
 - 按 `updatedAt` 从新到旧选择**最多 3 篇**，**同一分类最多 2 篇**。日期相同时根据 `featured`、`order` 和 ID 稳定排序。
 - `status: historical` 的旧笔记继续出现在知识分类集合，不为了凑满最近笔记数量而混入列表。
 - 中英文 `description` 都应写成**简洁、具体的一句话**。首页和笔记列表复用这个字段，不需要单独添加首页简介字段。
-- 如果想把新分类展示到首页，需要在引擎 `src/components/HomeKnowledgeHub.astro` 中配置；只在内容仓库中添加分类，不会自动改变首页精选分类列表。
+- 如需在「技术知识」或「工程之外」增加*分类入口*，应修改引擎 `src/components/HomeKnowledgeHub.astro` 中对应分类配置；这与最近笔记是否能展示没有关系。
 
 ## Frontmatter 示例
 
