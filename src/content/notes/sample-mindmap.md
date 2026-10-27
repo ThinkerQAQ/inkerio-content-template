@@ -1,9 +1,9 @@
 ---
 title: "软件系统设计思维导图"
 description: "使用 Markdown 层级展示系统设计的关键步骤，演示 Inkerio 的可交互思维导图视图。"
-sourcePath: "src/content/notes/sample-mindmap.md"
-category: example
-categoryLabel: Example
+sourcePath: "AI/sample-mindmap.md"
+category: ai
+categoryLabel: AI
 order: 2
 tags:
   - Example
