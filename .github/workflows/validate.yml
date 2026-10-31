@@ -1,0 +1,44 @@
+name: Validate template
+on:
+  push:
+    branches: [main]
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  template:
+    name: Validate with Inkerio
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          path: content
+      - uses: actions/checkout@v6
+        with:
+          repository: ThinkerQAQ/ThinkerQAQ.github.io
+          path: engine
+      - uses: actions/setup-go@v6
+        with:
+          go-version-file: engine/go.work
+          cache-dependency-path: engine/tools/blogctl/go.sum
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: engine/package-lock.json
+      - run: npm ci
+        working-directory: engine
+      - run: go run ./tools/blogctl/cmd site assemble --content-root ../content
+        working-directory: engine
+      - run: npm run check
+        working-directory: engine
+      - name: Check license and synthetic records
+        working-directory: content
+        run: |
+          test -s LICENSE
+          test -s COPYRIGHT.md
+          python3 - <<'PYCODE'
+          import json, pathlib
+          for p in pathlib.Path('src/content/workout-summaries').glob('*.json'):
+              assert json.loads(p.read_text()).get('demo') is True, str(p)
+          PYCODE

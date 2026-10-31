@@ -8,7 +8,13 @@ The [MIT License](LICENSE) in this repository applies to original template scaff
 
 本仓库 MIT 许可证适用于 ThinkerQAQ 原创的模板骨架、配置、工具及文档，**不包括下列明确排除的示例正文和媒体**。第三方素材继续适用各自的许可。
 
-## Excluded: demonstration writing and media
+## Local demonstration permission
+
+To the extent ThinkerQAQ holds the relevant rights, you may copy and modify the bundled demonstration writing and synthetic media for local previews, testing and template validation. This limited permission is separate from MIT and does not permit republishing these samples as your own public content. Replace the examples before publishing your site.
+
+在 ThinkerQAQ 拥有相关权利的范围内，允许复制、修改随附示例正文与合成媒体，用于本地预览、测试和模板验证。这项有限授权独立于 MIT，不授权将示例作为自己的公开内容发布；建站发布前请替换示例。
+
+## Excluded from MIT: demonstration writing and media
 
 - `src/content/**` contains sample articles, notes, profile pages and demonstration records. Their copyright text (`src/content/site/copyright.json`) is an **example of a future site author's policy**, not a grant of permission to redistribute all contents of this template under MIT or CC BY-NC-SA.
 - `public/media/**` contains demonstration illustrations and photographs (including synthetic samples); they are **not covered by the MIT software license**.
