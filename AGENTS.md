@@ -1,6 +1,6 @@
 # Agent Guide — Inkerio Content Template
 
-This repository stores public sample content and content-owned assets for Inkerio. Site runtime, rendering, schema, builds, publishing and deployment belong in the separate `ThinkerQAQ/ThinkerQAQ.github.io` engine repository. BlogCTL keeps its own name.
+This repository stores public sample content and content-owned assets for Inkerio. Site runtime, rendering, schema, builds, publishing and deployment belong in the separate `ThinkerQAQ/inkerio` engine repository. Website deployment and BlogCTL remain separate.
 
 ## Content rules
 

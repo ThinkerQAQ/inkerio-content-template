@@ -16,7 +16,7 @@ The original note belongs to the `ai` engineering category, so it is also featur
 Clone the engine and this template as described in the [README](../README.md), then from the **engine checkout** run:
 
 ```bash
-go run ./tools/blogctl/cmd site assemble --content-root ../blog-content
+node scripts/assemble-content.mjs --content-root ../blog-content
 npm run check
 npx --no-install astro dev --port 4321
 ```
@@ -29,4 +29,4 @@ Copy the Chinese source to `src/content/notes/YOUR_ID.md`, change the title, des
 
 For English, add `src/content/note-translations/en/YOUR_ID.md` with `translationOf: YOUR_ID` and an English Markdown body. Do **not** copy `defaultView` into the translation; it inherits that setting from the original note. Keep both structures in sync.
 
-This feature renders **Markdown as a Markmap view**, not native `.xmind` data. Convert an XMind map to hierarchical Markdown first if needed. The site still displays plain Markdown without JavaScript. See the engine's [full mind-map tutorial](https://github.com/ThinkerQAQ/ThinkerQAQ.github.io/blob/main/docs/how-to/mindmap-notes.md) and [schema reference](https://github.com/ThinkerQAQ/ThinkerQAQ.github.io/blob/main/docs/reference/content-schema.md).
+This feature renders **Markdown as a Markmap view**, not native `.xmind` data. Convert an XMind map to hierarchical Markdown first if needed. The site still displays plain Markdown without JavaScript. See the engine's [full mind-map tutorial](https://github.com/ThinkerQAQ/inkerio/blob/main/docs/how-to/mindmap-notes.md) and [schema reference](https://github.com/ThinkerQAQ/inkerio/blob/main/docs/reference/content-schema.md).

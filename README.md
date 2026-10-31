@@ -1,8 +1,8 @@
 # Inkerio Content Template
 
-[简体中文](README_ZH.md) · [Inkerio](https://github.com/ThinkerQAQ/ThinkerQAQ.github.io) · [Tutorial](https://github.com/ThinkerQAQ/ThinkerQAQ.github.io/blob/main/docs/tutorial/first-site.md)
+[简体中文](README_ZH.md) · [Inkerio](https://github.com/ThinkerQAQ/inkerio) · [Tutorial](https://github.com/ThinkerQAQ/inkerio/blob/main/docs/tutorial/first-site.md)
 
-Public sample content for **Inkerio**, the Astro-based bilingual static blog engine. This repository owns Markdown, sample data and content media; rendering, builds, deployment and BlogCTL belong to the engine repository.
+Public sample content for **Inkerio**, the Astro-based bilingual static blog engine. This repository owns Markdown, sample data and content media; rendering and builds belong to Inkerio; website deployment and BlogCTL publishing are separate.
 
 ## Run the examples
 
@@ -11,15 +11,15 @@ Keep the engine and content checkouts beside each other:
 ```bash
 mkdir inkerio-workspace
 cd inkerio-workspace
-git clone https://github.com/ThinkerQAQ/ThinkerQAQ.github.io.git
+git clone https://github.com/ThinkerQAQ/inkerio.git
 git clone https://github.com/ThinkerQAQ/inkerio-content-template.git blog-content
-cd ThinkerQAQ.github.io
+cd inkerio
 npm ci
-go run ./tools/blogctl/cmd site assemble --content-root ../blog-content
+node scripts/assemble-content.mjs --content-root ../blog-content
 npx --no-install astro dev --port 4321
 ```
 
-Requires Node.js 22+, Go 1.27.1, npm and Git. Open [localhost:4321](http://localhost:4321). This preview skips diagram rendering; the [engine tutorial](https://github.com/ThinkerQAQ/ThinkerQAQ.github.io/blob/main/docs/tutorial/first-site.md) explains full build dependencies and validation.
+Requires Node.js 22+, npm and Git. Open [localhost:4321](http://localhost:4321). This preview skips diagram rendering; the [engine tutorial](https://github.com/ThinkerQAQ/inkerio/blob/main/docs/tutorial/first-site.md) explains full build dependencies and validation.
 
 For your own writing, use **Use this template** on GitHub or fork the repository, then clone your repository as `blog-content`. The local directory name does not have to match the remote repository name. Edit the content checkout and repeat assembly; the engine's assembled `src/content/` is generated output.
 
@@ -35,7 +35,7 @@ For your own writing, use **Use this template** on GitHub or fork the repository
 | `src/data/content-manifest.json` | Content manifest |
 | `public/media/` | Sample covers, photo originals and thumbnails |
 
-The [Inkerio schema reference](https://github.com/ThinkerQAQ/ThinkerQAQ.github.io/blob/main/docs/reference/content-schema.md) links to the actual TypeScript definitions. This template is the single maintenance location for public demo content, not a second engine implementation.
+The [Inkerio schema reference](https://github.com/ThinkerQAQ/inkerio/blob/main/docs/reference/content-schema.md) links to the actual TypeScript definitions. This template is the single maintenance location for public demo content, not a second engine implementation.
 
 ## Recent notes and knowledge categories
 
@@ -51,7 +51,7 @@ Photography entries include 1, 4, 9 and 12-image layouts, long captions, archive
 
 ## Documentation and development
 
-- [Inkerio documentation](https://github.com/ThinkerQAQ/ThinkerQAQ.github.io/blob/main/docs/index.md): site setup, content schema and deployment.
+- [Inkerio documentation](https://github.com/ThinkerQAQ/inkerio/blob/main/docs/index.md): site setup, content schema and deployment.
 - [BlogCTL documentation](https://github.com/ThinkerQAQ/ThinkerQAQ.github.io/blob/main/tools/blogctl/docs/index.md): companion application, publishing and configuration.
 - [AGENTS.md](AGENTS.md): content-editing boundaries.
 

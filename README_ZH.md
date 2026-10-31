@@ -1,8 +1,8 @@
 # Inkerio Content Template
 
-[English](README.md) · [Inkerio](https://github.com/ThinkerQAQ/ThinkerQAQ.github.io) · [完整教程](https://github.com/ThinkerQAQ/ThinkerQAQ.github.io/blob/main/docs/zh-CN/tutorial/first-site.md)
+[English](README.md) · [Inkerio](https://github.com/ThinkerQAQ/inkerio) · [完整教程](https://github.com/ThinkerQAQ/inkerio/blob/main/docs/zh-CN/tutorial/first-site.md)
 
-**Inkerio** 双语静态博客引擎的公开示例内容仓库。这里只保存 Markdown、示例数据和内容资源；Astro 渲染、构建、部署与 BlogCTL 代码由引擎仓库维护。
+**Inkerio** 双语静态博客引擎的公开示例内容仓库。这里只保存 Markdown、示例数据和内容资源；Astro 渲染与构建由 Inkerio 维护；个人站点部署和 BlogCTL 分发工具单独管理。
 
 ## 运行示例
 
@@ -11,15 +11,15 @@
 ```bash
 mkdir inkerio-workspace
 cd inkerio-workspace
-git clone https://github.com/ThinkerQAQ/ThinkerQAQ.github.io.git
+git clone https://github.com/ThinkerQAQ/inkerio.git
 git clone https://github.com/ThinkerQAQ/inkerio-content-template.git blog-content
-cd ThinkerQAQ.github.io
+cd inkerio
 npm ci
-go run ./tools/blogctl/cmd site assemble --content-root ../blog-content
+node scripts/assemble-content.mjs --content-root ../blog-content
 npx --no-install astro dev --port 4321
 ```
 
-需要 Node.js 22+、Go 1.27.1、npm 和 Git。访问 [localhost:4321](http://localhost:4321)。这里直接启动 Astro，跳过图表预渲染；完整构建依赖与验证步骤见[引擎教程](https://github.com/ThinkerQAQ/ThinkerQAQ.github.io/blob/main/docs/zh-CN/tutorial/first-site.md)。
+需要 Node.js 22+、npm 和 Git。访问 [localhost:4321](http://localhost:4321)。这里直接启动 Astro，跳过图表预渲染；完整构建依赖与验证步骤见[引擎教程](https://github.com/ThinkerQAQ/inkerio/blob/main/docs/zh-CN/tutorial/first-site.md)。
 
 正式维护自己的内容时，在 GitHub 点击 **Use this template** 创建仓库，或 Fork 本仓库，再把自己的仓库克隆为 `blog-content`。本地目录名不必与远端仓库同名。文章修改应提交到内容仓库，并重新装配；引擎中的 `src/content/` 是生成的构建输入。
 
@@ -37,7 +37,7 @@ npx --no-install astro dev --port 4321
 | `src/data/content-manifest.json` | 内容清单 |
 | `public/media/` | 示例封面、摄影原图与缩略图 |
 
-字段定义以 [Inkerio Schema 参考](https://github.com/ThinkerQAQ/ThinkerQAQ.github.io/blob/main/docs/zh-CN/reference/content-schema.md)链接的 TypeScript 实现为准。此仓库是公开演示数据的唯一维护位置，不包含另一套引擎实现。
+字段定义以 [Inkerio Schema 参考](https://github.com/ThinkerQAQ/inkerio/blob/main/docs/zh-CN/reference/content-schema.md)链接的 TypeScript 实现为准。此仓库是公开演示数据的唯一维护位置，不包含另一套引擎实现。
 
 ## 最近笔记与知识分类
 
@@ -53,7 +53,7 @@ npx --no-install astro dev --port 4321
 
 ## 文档与开发
 
-- [Inkerio 文档](https://github.com/ThinkerQAQ/ThinkerQAQ.github.io/blob/main/docs/zh-CN/index.md)：网站运行、内容 Schema 与部署。
+- [Inkerio 文档](https://github.com/ThinkerQAQ/inkerio/blob/main/docs/zh-CN/index.md)：网站运行、内容 Schema 与部署。
 - [BlogCTL 文档](https://github.com/ThinkerQAQ/ThinkerQAQ.github.io/blob/main/tools/blogctl/docs/zh-CN/index.md)：配套管理工具、发布与配置。
 - [AGENTS.md](AGENTS.md)：内容编辑约束。
 

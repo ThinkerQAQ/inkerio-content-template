@@ -16,7 +16,7 @@
 按 [README](../README_ZH.md) 克隆引擎与本模板后，在**引擎目录**执行：
 
 ```bash
-go run ./tools/blogctl/cmd site assemble --content-root ../blog-content
+node scripts/assemble-content.mjs --content-root ../blog-content
 npm run check
 npx --no-install astro dev --port 4321
 ```
@@ -31,4 +31,4 @@ npx --no-install astro dev --port 4321
 
 此功能是将**Markdown 渲染为 Markmap 思维导图**，不是原生读取 `.xmind`。已有 XMind 文件需要先转为层级化 Markdown 并检查内容。禁用 JavaScript 时笔记正文仍可阅读。
 
-更多细节见引擎的[思维导图完整教程](https://github.com/ThinkerQAQ/ThinkerQAQ.github.io/blob/main/docs/zh-CN/how-to/mindmap-notes.md)与[字段说明](https://github.com/ThinkerQAQ/ThinkerQAQ.github.io/blob/main/docs/zh-CN/reference/content-schema.md)。
+更多细节见引擎的[思维导图完整教程](https://github.com/ThinkerQAQ/inkerio/blob/main/docs/zh-CN/how-to/mindmap-notes.md)与[字段说明](https://github.com/ThinkerQAQ/inkerio/blob/main/docs/zh-CN/reference/content-schema.md)。
