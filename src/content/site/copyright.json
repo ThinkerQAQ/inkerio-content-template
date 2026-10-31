@@ -1,0 +1,16 @@
+{
+  "zh": {
+    "title": "版权声明",
+    "notice": "本站示例原创文字、摄影作品及原创插图版权归示例作者所有。欢迎分享与合理引用，请注明来源；全文转载、改编或商业使用请先取得授权。第三方素材版权归原权利人所有。",
+    "photo": "本站示例原创摄影作品 © 示例作者。引用请注明来源；转载、改编或商业使用请先取得授权。第三方素材版权归原权利人所有。",
+    "syndication": "© 示例作者。原创作品请注明来源；全文转载、改编或商业使用需要授权。第三方素材权利归原权利人所有。",
+    "source": "原文"
+  },
+  "en": {
+    "title": "Copyright Notice",
+    "notice": "Original demo text, photographs, and illustrations are © Sample Author. Sharing and reasonable quotation are welcome with attribution; full republication, adaptation, or commercial use requires prior permission. Third-party materials remain with their owners.",
+    "photo": "Original demo photographs are © Sample Author. Please credit the source. Republication, adaptation, or commercial use requires permission. Third-party images belong to their owners.",
+    "syndication": "© Sample Author. Please credit the source when sharing original content; full republication, adaptation, or commercial use requires permission. Third-party rights remain with their owners.",
+    "source": "Original article"
+  }
+}

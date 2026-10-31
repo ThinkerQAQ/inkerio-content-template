@@ -56,3 +56,7 @@ Photography entries include 1, 4, 9 and 12-image layouts, long captions, archive
 - [AGENTS.md](AGENTS.md): content-editing boundaries.
 
 No DevTool installation is required. The legacy `.devtool.toml` file is optional historical configuration, not part of the Inkerio runtime.
+
+## About page and copyright policy
+
+The bilingual sample About pages are stored in `src/content/pages/about.md` and `src/content/pages/en/about.md`. Edit them as content, not as Astro components. Copyright wording for the whole site and BlogCTL syndication is in `src/content/site/copyright.json`, with `zh` and `en` translations. Inkerio assembles these files into `src/content/`; BlogCTL reads the policy from your configured content root. Keep the About summary consistent with the policy.
