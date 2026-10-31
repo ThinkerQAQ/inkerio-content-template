@@ -60,3 +60,7 @@ No DevTool installation is required. The legacy `.devtool.toml` file is optional
 ## About page and copyright policy
 
 The bilingual sample About pages are stored in `src/content/pages/about.md` and `src/content/pages/en/about.md`. Edit them as content, not as Astro components. Copyright wording for the whole site and BlogCTL syndication is in `src/content/site/copyright.json`, with `zh` and `en` translations. Inkerio assembles these files into `src/content/`; BlogCTL reads the policy from your configured content root. Keep the About summary consistent with the policy. The sample demonstrates CC BY-NC-SA 4.0 for original writing/technical diagrams and All Rights Reserved for photographs/standalone illustrations; **this does not grant rights to third-party materials**. Verify ownership and customize the author and license scope before publishing.
+
+## License and demo content
+
+The original template **scaffolding/configuration/documentation** is licensed under [MIT](LICENSE). This does **not** license the demonstration articles and media under MIT. The copyright policy in `src/content/site/copyright.json` is a **sample for future site owners**, not a blanket redistribution license for this repository. Replace sample writing and media before publishing a public site. See the [license scope](COPYRIGHT.md).
