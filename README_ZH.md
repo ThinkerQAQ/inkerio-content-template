@@ -31,6 +31,8 @@ npx --no-install astro dev --port 4321
 | `src/content/notes/`、`note-translations/en/` | 示例笔记与翻译，含中英文交互式思维导图 |
 | `src/content/projects/`、`series/` | 项目和系列示例 |
 | `src/content/life/` | 虚构的摄影记录、年份归档与草稿 |
+| `src/content/pages/` | 中英文 About 页面及 SEO 摘要 |
+| `src/content/site/copyright.json` | 全站及分发版权文案，含中英文 |
 | `src/content/workout-summaries/` | 虚构的月度健身统计 |
 | `src/data/content-manifest.json` | 内容清单 |
 | `public/media/` | 示例封面、摄影原图与缩略图 |
@@ -56,3 +58,7 @@ npx --no-install astro dev --port 4321
 - [AGENTS.md](AGENTS.md)：内容编辑约束。
 
 使用模板不需要安装 DevTool。保留的 `.devtool.toml` 只是可选的历史配置，不属于 Inkerio 运行依赖。
+
+## About 页面与版权配置
+
+中英文 About 示例位于 `src/content/pages/about.md` 和 `src/content/pages/en/about.md`，修改正文无需修改 Astro 组件。全站版权声明与 BlogCTL 分发声明统一维护于 `src/content/site/copyright.json` 的 `zh`、`en` 字段。Inkerio 装配内容并渲染，BlogCTL 根据内容根目录读取该配置；About 摘要需与版权策略保持一致。

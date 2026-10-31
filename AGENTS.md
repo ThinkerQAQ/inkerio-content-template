@@ -4,7 +4,7 @@ This repository stores public sample content and content-owned assets for Inkeri
 
 ## Content rules
 
-- `src/content/` owns sample Articles, Notes, Series, Projects, photography and monthly workout summaries. `public/media/` owns their assets.
+- `src/content/` owns sample Articles, Notes, Series, Projects, photography, monthly workout summaries, bilingual About pages (`pages/`), and the example copyright policy (`site/copyright.json`). `public/media/` owns their assets.
 - Keep Chinese and English counterparts aligned, preserving frontmatter and series relationships.
 - Photography and workout examples are fictional. Preserve `"demo": true` on workout summaries; never introduce personal training records, credentials or private content.
 - Read relevant Markdown sections before editing. For a whole-document review, inspect every section before making whole-document claims.
