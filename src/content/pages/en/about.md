@@ -26,7 +26,11 @@ Use [RSS](/en/rss.xml) to follow updates.
 
 ## Copyright and Use
 
-Original demo materials are owned by the sample author. Sharing and reasonable quotation are welcome with attribution; full republication, adaptation, or commercial use requires permission. Third-party materials belong to their respective owners. Replace this summary and the accompanying policy before publishing your own site.
+This template demonstrates an optional license policy: Original articles, notes, and accompanying technical diagrams owned by the site author are under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/). Noncommercial republication and adaptation are allowed with attribution, links to the original and the license, notices of changes, and ShareAlike; commercial use requires separate permission.
+
+Original photographs and standalone illustrations are All Rights Reserved and excluded from that license. Page links may be shared; reproduction, republication, adaptation, and commercial use require permission, except as permitted by law. Third-party rights remain with their owners.
+
+AI search tools may discover and cite this site with attribution. No automatic permission is granted for commercial AI training, fine-tuning, or dataset redistribution where copyright permission is legally required. **This is an example only: before publishing, confirm you hold the relevant rights and customize the author, scope, and `src/content/site/copyright.json`.**
 
 Inkerio's open-source code license does not grant rights to republish text or photography.
 

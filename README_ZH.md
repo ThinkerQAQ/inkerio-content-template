@@ -61,4 +61,4 @@ npx --no-install astro dev --port 4321
 
 ## About 页面与版权配置
 
-中英文 About 示例位于 `src/content/pages/about.md` 和 `src/content/pages/en/about.md`，修改正文无需修改 Astro 组件。全站版权声明与 BlogCTL 分发声明统一维护于 `src/content/site/copyright.json` 的 `zh`、`en` 字段。Inkerio 装配内容并渲染，BlogCTL 根据内容根目录读取该配置；About 摘要需与版权策略保持一致。
+中英文 About 示例位于 `src/content/pages/about.md` 和 `src/content/pages/en/about.md`，修改正文无需修改 Astro 组件。全站版权声明与 BlogCTL 分发声明统一维护于 `src/content/site/copyright.json` 的 `zh`、`en` 字段。Inkerio 装配内容并渲染，BlogCTL 根据内容根目录读取该配置；About 摘要需与版权策略保持一致。示例使用 CC BY-NC-SA 4.0（原创文字与随文技术图示）及 All Rights Reserved（摄影与独立插图）作说明，**不意味着模板使用者已获得第三方素材的授权**；发布前须自行确认版权并替换示例作者和授权范围。
