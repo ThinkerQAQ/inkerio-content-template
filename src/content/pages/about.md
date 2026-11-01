@@ -36,4 +36,4 @@ Inkerio 的框架代码遵循其仓库中的开源许可证，代码许可证不
 
 ## 联系
 
-参见 [Inkerio 仓库](https://github.com/ThinkerQAQ/ThinkerQAQ.github.io)。
+参见 [Inkerio 仓库](https://github.com/ThinkerQAQ/inkerio)。

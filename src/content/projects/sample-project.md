@@ -9,7 +9,7 @@ tags:
 featured: true
 github:
   - title: Public Engine
-    url: "https://github.com/ThinkerQAQ/ThinkerQAQ.github.io"
+    url: "https://github.com/ThinkerQAQ/inkerio"
 tutorials:
   - sample-article
 documentation:

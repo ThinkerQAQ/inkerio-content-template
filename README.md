@@ -2,7 +2,7 @@
 
 [简体中文](README_ZH.md) · [Inkerio](https://github.com/ThinkerQAQ/inkerio) · [Tutorial](https://github.com/ThinkerQAQ/inkerio/blob/main/docs/tutorial/first-site.md)
 
-Public sample content for **Inkerio**, the Astro-based bilingual static blog engine. This repository owns Markdown, sample data and content media; rendering and builds belong to Inkerio; website deployment and BlogCTL publishing are separate.
+Public sample content for **Inkerio**, the Astro-based bilingual static blog engine. This repository owns Markdown, sample data and content media; rendering and builds belong to Inkerio; website deployment and optional SyndiRelay publishing are separate.
 
 ## Run the examples
 
@@ -52,14 +52,14 @@ Photography entries include 1, 4, 9 and 12-image layouts, long captions, archive
 ## Documentation and development
 
 - [Inkerio documentation](https://github.com/ThinkerQAQ/inkerio/blob/main/docs/index.md): site setup, content schema and deployment.
-- [BlogCTL documentation](https://github.com/ThinkerQAQ/ThinkerQAQ.github.io/blob/main/tools/blogctl/docs/index.md): companion application, publishing and configuration.
+- SyndiRelay (independent private project): optional article syndication and publishing configuration.
 - [AGENTS.md](AGENTS.md): content-editing boundaries.
 
 No DevTool installation is required. The legacy `.devtool.toml` file is optional historical configuration, not part of the Inkerio runtime.
 
 ## About page and copyright policy
 
-The bilingual sample About pages are stored in `src/content/pages/about.md` and `src/content/pages/en/about.md`. Edit them as content, not as Astro components. Copyright wording for the whole site and BlogCTL syndication is in `src/content/site/copyright.json`, with `zh` and `en` translations. Inkerio assembles these files into `src/content/`; BlogCTL reads the policy from your configured content root. Keep the About summary consistent with the policy. The sample demonstrates CC BY-NC-SA 4.0 for original writing/technical diagrams and All Rights Reserved for photographs/standalone illustrations; **this does not grant rights to third-party materials**. Verify ownership and customize the author and license scope before publishing.
+The bilingual sample About pages are stored in `src/content/pages/about.md` and `src/content/pages/en/about.md`. Edit them as content, not as Astro components. Copyright wording for the whole site and optional SyndiRelay syndication is in `src/content/site/copyright.json`, with `zh` and `en` translations. Inkerio assembles these files into `src/content/`; SyndiRelay reads the policy from your configured content root. Keep the About summary consistent with the policy. The sample demonstrates CC BY-NC-SA 4.0 for original writing/technical diagrams and All Rights Reserved for photographs/standalone illustrations; **this does not grant rights to third-party materials**. Verify ownership and customize the author and license scope before publishing.
 
 ## License and demo content
 
