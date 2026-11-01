@@ -39,7 +39,7 @@ jobs:
         uses: actions/checkout@v6
         with:
           repository: ThinkerQAQ/inkerio
-          ref: 4cb681a89f16a63d7cce614420cd9df91d96de0b
+          ref: 5cf30eeefd6a2f9313f10dae37add2001e124bc9
           path: engine
           persist-credentials: false
 

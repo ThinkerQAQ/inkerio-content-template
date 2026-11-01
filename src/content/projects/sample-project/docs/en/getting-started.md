@@ -1,11 +1,10 @@
 ---
 title: Getting started
-description: Follow the project page into a documentation series and read the chapters
-  in order.
-series: sample-project-docs
+description: Follow the project page into a project documentation and read the chapters in order.
 language: en
 updatedAt: '2026-11-01'
 translationOf: sample-project/getting-started
+project: sample-project
 ---
 
 ## Read the project introduction
@@ -14,7 +13,7 @@ Open the [sample project](/en/projects/sample-project/) and read its introductio
 
 ## Open the documentation
 
-The Documentation link below the project opens the series contents on this site.
+The Documentation link below the project opens the project contents on this site.
 
 ## Continue reading
 

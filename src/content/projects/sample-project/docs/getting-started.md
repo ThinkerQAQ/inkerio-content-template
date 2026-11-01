@@ -1,9 +1,9 @@
 ---
 title: 开始使用
-description: 从项目介绍进入文档系列，按目录阅读各个章节。
-series: sample-project-docs
+description: 从项目 README 进入文档，按目录阅读各个章节。
 language: zh
 updatedAt: '2026-11-01'
+project: sample-project
 ---
 
 ## 阅读项目介绍
@@ -12,7 +12,7 @@ updatedAt: '2026-11-01'
 
 ## 进入文档
 
-项目页下方的「文档」链接打开本站的系列目录。
+项目页下方的「文档」链接打开本站的项目目录。
 
 ## 继续阅读
 
