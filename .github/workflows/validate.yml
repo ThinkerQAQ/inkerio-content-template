@@ -7,6 +7,8 @@ permissions:
   contents: read
 jobs:
   template:
+    # Only maintainers of the original template need this validation job.
+    if: github.repository == 'ThinkerQAQ/inkerio-content-template'
     name: Validate with Inkerio
     runs-on: ubuntu-latest
     steps:
@@ -26,6 +28,16 @@ jobs:
         working-directory: engine
       - run: node scripts/assemble-content.mjs --content-root ../content
         working-directory: engine
+      - name: Verify example content is blocked from public deployment
+        run: |
+          if node scripts/check-publication.mjs; then
+            echo 'Bundled demonstration content must not be published' >&2
+            exit 1
+          fi
+        working-directory: content
+      - name: Validate site configuration and publication safety
+        run: node --test scripts/configure-site.test.mjs scripts/check-publication.test.mjs
+        working-directory: content
       - run: npm run check
         working-directory: engine
       - name: Check license and synthetic records

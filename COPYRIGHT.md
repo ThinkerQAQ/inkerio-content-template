@@ -1,6 +1,6 @@
 # License scope / 许可证适用范围
 
-This repository is a starter **content template** for [Inkerio](https://github.com/ThinkerQAQ/ThinkerQAQ.github.io), which is a separate MIT-licensed software repository.
+This repository is a starter **content template** for [Inkerio](https://github.com/ThinkerQAQ/inkerio), which is a separate MIT-licensed software repository.
 
 ## MIT: original template scaffolding
 
