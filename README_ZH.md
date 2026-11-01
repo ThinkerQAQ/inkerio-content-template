@@ -1,6 +1,6 @@
 # Inkerio Content Template
 
-[English](README.md) · [Inkerio](https://github.com/ThinkerQAQ/inkerio) · [完整教程](https://github.com/ThinkerQAQ/inkerio/blob/main/docs/zh-CN/tutorial/first-site.md)
+[English](README.md) · [Inkerio](https://github.com/ThinkerQAQ/inkerio) · [文档导航](docs/zh-CN/index.md) · [完整教程](https://github.com/ThinkerQAQ/inkerio/blob/main/docs/zh-CN/tutorial/first-site.md)
 
 **Inkerio** 双语静态博客引擎的公开示例内容仓库。这里只保存 Markdown、示例数据和内容资源；Astro 渲染与构建由 Inkerio 维护；个人站点部署和 可选的 SyndiRelay 分发工具单独管理。
 
@@ -19,7 +19,7 @@ node scripts/assemble-content.mjs --content-root ../blog-content
 npx --no-install astro dev --port 4321
 ```
 
-需要 Node.js 22+、npm 和 Git。访问 [localhost:4321](http://localhost:4321)。这里直接启动 Astro，跳过图表预渲染；完整构建依赖与验证步骤见[引擎教程](https://github.com/ThinkerQAQ/inkerio/blob/main/docs/zh-CN/tutorial/first-site.md)。
+需要 Node.js 22.12+、npm 和 Git。访问 [localhost:4321](http://localhost:4321)。这里直接启动 Astro，跳过图表预渲染；完整构建依赖与验证步骤见[引擎教程](https://github.com/ThinkerQAQ/inkerio/blob/main/docs/zh-CN/tutorial/first-site.md)。
 
 正式维护自己的内容时，在 GitHub 点击 **Use this template** 创建仓库，或 Fork 本仓库，再把自己的仓库克隆为 `blog-content`。本地目录名不必与远端仓库同名。文章修改应提交到内容仓库，并重新装配；引擎中的 `src/content/` 是生成的构建输入。
 
@@ -54,14 +54,14 @@ npx --no-install astro dev --port 4321
 ## 文档与开发
 
 - [Inkerio 文档](https://github.com/ThinkerQAQ/inkerio/blob/main/docs/zh-CN/index.md)：网站运行、内容 Schema 与部署。
-- SyndiRelay（独立私有项目）：可选的文章站外分发与管理。
+- [SyndiRelay](https://github.com/ThinkerQAQ/syndirelay)（源码已公开的独立项目）：可选的文章站外分发，不影响 Inkerio 本地预览。
 - [AGENTS.md](AGENTS.md)：内容编辑约束。
 
 使用模板不需要安装 DevTool。保留的 `.devtool.toml` 只是可选的历史配置，不属于 Inkerio 运行依赖。
 
 ## About 页面与版权配置
 
-中英文 About 示例位于 `src/content/pages/about.md` 和 `src/content/pages/en/about.md`，修改正文无需修改 Astro 组件。全站版权声明与可选的 SyndiRelay 分发声明统一维护于 `src/content/site/copyright.json` 的 `zh`、`en` 字段。Inkerio 装配内容并渲染，独立的 SyndiRelay 可根据内容根目录读取该配置；About 摘要需与版权策略保持一致。示例使用 CC BY-NC-SA 4.0（原创文字与随文技术图示）及 All Rights Reserved（摄影与独立插图）作说明，**不意味着模板使用者已获得第三方素材的授权**；发布前须自行确认版权并替换示例作者和授权范围。
+中英文 About 示例位于 `src/content/pages/about.md` 和 `src/content/pages/en/about.md`，修改正文无需修改 Astro 组件。全站版权声明与可选的 SyndiRelay 分发声明统一维护于 `src/content/site/copyright.json` 的 `zh`、`en` 字段。Inkerio 装配内容并渲染，独立的 SyndiRelay 在没有更高优先级的本地版权声明时，才根据内容根目录读取该配置；About 摘要需与版权策略保持一致。示例使用 CC BY-NC-SA 4.0（原创文字与随文技术图示）及 All Rights Reserved（摄影与独立插图）作说明，**不意味着模板使用者已获得第三方素材的授权**；发布前须自行确认版权并替换示例作者和授权范围。
 
 ## 模板许可与演示内容
 
