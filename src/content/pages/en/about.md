@@ -36,4 +36,4 @@ Inkerio's open-source code license does not grant rights to republish text or ph
 
 ## Contact
 
-See the [Inkerio repository](https://github.com/ThinkerQAQ/ThinkerQAQ.github.io).
+See the [Inkerio repository](https://github.com/ThinkerQAQ/inkerio).
