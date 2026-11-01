@@ -10,10 +10,6 @@ featured: true
 github:
   - title: Public Engine
     url: "https://github.com/ThinkerQAQ/inkerio"
-tutorials:
-  - sample-article
-documentation:
-  - sample-article
 translations:
   en:
     title: "Sample Project"

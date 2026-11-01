@@ -87,3 +87,6 @@ If Pages fails on **sample content**, check the file paths printed by `check-pub
 You can later point SyndiRelay at this same content repository. No second `blog-content` repository is required.
 
 **License:** Original template scaffolding/configuration is [MIT](LICENSE). Demo articles, photos, illustrations and other media are **not automatically MIT-licensed**; see [COPYRIGHT.md](COPYRIGHT.md). Replace demo materials and fictional data before publishing. Never commit secrets, API keys, cookies or sensitive draft content to a public repository.
+
+
+Project introductions belong in `src/content/projects/` (translations in `project-translations/en/`). Standalone manuals belong in `documents/`, grouped by a series with `kind: documentation`, `project`, and ordered `relatedDocuments`. See `sample-project-docs` for a bilingual example. These documents are separate from article lists and RSS. Requires an engine version with documentation-series support.

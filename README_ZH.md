@@ -91,3 +91,6 @@ npx --no-install astro dev --port 4321
 如果以后想将文章同步到其他平台，可以让 SyndiRelay 直接读取这个内容仓库；**无需再创建第二个 `blog-content` 仓库**。
 
 **版权与安全：** 模板骨架、配置与原创文档采用 [MIT](LICENSE)，但演示文章、图片等素材**不自动适用 MIT**，详见 [COPYRIGHT.md](COPYRIGHT.md)。正式发布前应替换示例内容、虚构数据和版权设置；不要将密钥、Cookie、敏感草稿放入公开仓库。
+
+
+项目介绍放在 `src/content/projects/`（英文在 `project-translations/en/`）。独立手册放在 `documents/`，通过系列的 `kind: documentation`、`project` 和有序的 `relatedDocuments` 组织；中英文示例见 `sample-project-docs`。文档不会进入普通文章列表和文章 RSS，需配合支持文档系列的引擎版本。
