@@ -48,7 +48,7 @@ export async function checkPublication() {
     "Public deployment blocked: replace or remove the bundled demonstration content and sample copyright policy before publishing.\n"
     + examples.slice(0, 8).map((f) => " - " + f).join("\n")
     + (examples.length > 8 ? "\n - ... and " + (examples.length - 8) + " more example file(s)." : "")
-    + "\nSee README.md / README_ZH.md, Step 2."
+    + "\nSee Inkerio README, section 2.3:\nhttps://github.com/ThinkerQAQ/inkerio/blob/main/README.md#23-replace-the-example-content\nhttps://github.com/ThinkerQAQ/inkerio/blob/main/README_ZH.md#23-替换示例内容"
   );
   console.log("No bundled demo content markers detected; public content remains the site owner's responsibility.");
 }
