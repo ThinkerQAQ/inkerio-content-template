@@ -3,7 +3,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 const root = fileURLToPath(new URL("../", import.meta.url));
-const demoPrefix = /^(?:src\/content\/(?:articles|notes|note-translations|projects|series)\/.*sample[^/]*\.md|public\/media\/(?:articles\/sample-article|life\/sample-album)\/.*)$/i;
+const demoPrefix = /^(?:src\/content\/(?:articles|notes|note-translations|projects|project-translations|documents|series)\/(?:[^/]+\/)*sample[^/]*(?:\/.*)?\.md|public\/media\/(?:articles\/sample-article|life\/sample-album)\/.*)$/i;
 
 async function walk(dir) {
   const files = [];
