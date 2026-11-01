@@ -7,6 +7,8 @@ permissions:
   contents: read
 jobs:
   template:
+    # Only maintainers of the original template need this validation job.
+    if: github.repository == 'ThinkerQAQ/inkerio-content-template'
     name: Validate with Inkerio
     runs-on: ubuntu-latest
     steps:
