@@ -28,8 +28,15 @@ jobs:
         working-directory: engine
       - run: node scripts/assemble-content.mjs --content-root ../content
         working-directory: engine
-      - name: Validate site configuration helper
-        run: node --test scripts/configure-site.test.mjs
+      - name: Verify example content is blocked from public deployment
+        run: |
+          if node scripts/check-publication.mjs; then
+            echo 'Bundled demonstration content must not be published' >&2
+            exit 1
+          fi
+        working-directory: content
+      - name: Validate site configuration and publication safety
+        run: node --test scripts/configure-site.test.mjs scripts/check-publication.test.mjs
         working-directory: content
       - run: npm run check
         working-directory: engine

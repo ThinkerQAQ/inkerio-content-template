@@ -35,6 +35,8 @@
 
 其中 `url` 必须与实际 GitHub Pages 网址一致，`alice` 换成自己的用户名。**不要保留 `YOUR_NAME`、`YOUR_USERNAME` 占位符**，构建时会直接报错，避免把示例身份误发布为正式网站。
 
+**正式部署前，必须将模板中的演示文章、摄影图片、虚构运动记录、About 页面和版权文字替换成自己的内容。** 这些素材目前只许可本地预览，不允许直接作为自己的公开作品发布。工作流通过 `node scripts/check-publication.mjs` 检查残留示例并给出具体文件路径；不会悄悄删除文件，也不会直接将演示内容发布出去。可以删除不需要的示例目录，再按相同格式新增自己的 Markdown。
+
 文章保存在 `src/content/articles/`，笔记在 `src/content/notes/`，About 页面分别是 `src/content/pages/about.md` 和 `src/content/pages/en/about.md`，图片放在 `public/media/`。全站中英文版权说明由 `src/content/site/copyright.json` 维护，发布前应按自己的实际版权政策调整，不能直接照搬演示作者的授权声明。
 
 ### 3. 部署到 GitHub Pages
@@ -72,6 +74,10 @@ npx --no-install astro dev --port 4321
 将 `site.config.json` 的 `url` 改为自己的 HTTPS 域名，再到 **Settings → Pages → Custom domain** 添加域名，并按照 [GitHub 官方自定义域名文档](https://docs.github.com/zh/pages/configuring-a-custom-domain-for-your-github-pages-site) 设置 DNS。
 
 单独提交 `CNAME` 文件并不能替代 GitHub Pages 的域名设置。第一次建站建议先使用免费的 `username.github.io` 验证整条链路，再考虑迁移域名。
+
+## 常见问题
+
+**构建提示发现示例内容？** 根据 `check-publication.mjs` 打印的路径替换或删除对应文件。**域名与 GitHub 用户名不匹配？** 核对 `site.config.json`。**没有触发部署？** 检查 **Settings → Pages** 是否选择 **GitHub Actions**，必要时在 Actions 手动运行。后续修改文章或站点配置，提交到 `main` 即可再次部署。
 
 ## 仓库之间的关系
 

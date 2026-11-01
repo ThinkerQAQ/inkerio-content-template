@@ -35,6 +35,8 @@ Open `site.config.json` in your new repository and edit these five fields:
 
 Replace `alice` with your own GitHub username. **The `url` must match your actual GitHub Pages address.** Do not leave `YOUR_NAME` or `YOUR_USERNAME` placeholders: the build rejects them with an actionable error.
 
+**Before public deployment, replace the bundled demo articles, photos, example workout records, About content and copyright text with your own materials.** Their limited local-preview permission does not cover public republication. The deployment workflow runs `node scripts/check-publication.mjs` and fails with a list of leftover demo files; it does not silently deploy or delete them. You may remove the sample content directories and add your own Markdown, or replace the sample files with your own work under different filenames.
+
 Personalize your content in the same repository: `src/content/articles/` for posts, `src/content/notes/` for notes, `src/content/pages/about.md` and `src/content/pages/en/about.md` for About, `public/media/` for images, and `src/content/site/copyright.json` for your bilingual copyright policy. The example policy is **not** automatically the license for your writing; update it to your actual rights.
 
 ### 3. Deploy to GitHub Pages
@@ -68,6 +70,10 @@ Open http://localhost:4321. The commands use **your** content and site settings.
 ### 5. Custom domain (optional)
 
 To use your own domain, change `site.config.json` → `url` to its HTTPS origin, configure that domain in **Settings → Pages → Custom domain**, and update its DNS as described by [GitHub's official custom-domain guide](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site). A `CNAME` file by itself does not configure GitHub Pages for a custom domain.
+
+## Troubleshooting
+
+If Pages fails on **sample content**, check the file paths printed by `check-publication.mjs` and remove or replace them. If the site URL does not match the GitHub Pages username, correct `site.config.json`. If Pages does not run, select **GitHub Actions** under **Settings → Pages** and launch the workflow manually. Each subsequent commit to site content or configuration triggers a new build.
 
 ## Repository boundaries
 

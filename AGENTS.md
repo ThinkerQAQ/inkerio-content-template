@@ -15,4 +15,4 @@ This repository stores public sample content and content-owned assets for Inkeri
 
 Check the current branch and worktree before editing. Make small coherent commits, verify Markdown links and validate representative content through Inkerio's existing assembly/schema checks. Use isolated worktrees when another task is active. Do not merge without explicit user approval.
 
-For site setup and publishing, link to the engine's Tutorial and BlogCTL documentation instead of duplicating their full instructions. Maintain README.md and README_ZH.md together.
+The canonical user-facing setup and publishing guidance is in the English/Chinese README files of Inkerio and this content template. Do not recreate a separate docs/ tree. Maintain README.md and README_ZH.md together.

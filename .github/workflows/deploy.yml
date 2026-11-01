@@ -8,6 +8,7 @@ on:
       - "public/**"
       - "site.config.json"
       - "scripts/configure-site.mjs"
+      - "scripts/check-publication.mjs"
       - ".github/workflows/deploy.yml"
   workflow_dispatch:
 
@@ -69,6 +70,9 @@ jobs:
 
       - name: Configure Inkerio from my site settings
         run: node content/scripts/configure-site.mjs --engine engine --repository "$GITHUB_REPOSITORY"
+
+      - name: Ensure demo materials are not published
+        run: node content/scripts/check-publication.mjs
 
       - name: Assemble my content
         working-directory: engine
