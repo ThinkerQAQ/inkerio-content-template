@@ -93,4 +93,10 @@ npx --no-install astro dev --port 4321
 **版权与安全：** 模板骨架、配置与原创文档采用 [MIT](LICENSE)，但演示文章、图片等素材**不自动适用 MIT**，详见 [COPYRIGHT.md](COPYRIGHT.md)。正式发布前应替换示例内容、虚构数据和版权设置；不要将密钥、Cookie、敏感草稿放入公开仓库。
 
 
-项目介绍放在 `src/content/projects/`（英文在 `project-translations/en/`）。独立手册放在 `documents/`，通过系列的 `kind: documentation`、`project` 和有序的 `relatedDocuments` 组织；中英文示例见 `sample-project-docs`。文档不会进入普通文章列表和文章 RSS，需配合支持文档系列的引擎版本。
+
+
+### 项目 README 与 docs
+
+每个项目存放在 `src/content/projects/<id>/`：`project.md` 保存项目元数据，`README_ZH.md` 与 `README.md` 保存中英文介绍，`docs/` 保存章节（英文对应文件位于 `docs/en/`），`series.md` 保存系列元数据和章节顺序。README 是系列第一篇。项目、文档和普通文章共用 `ReadingLayout`、系列目录、本页目录、阅读工具和上下篇导航；仅内容存储与订阅归属不同。项目和文档不进入普通文章列表及文章 RSS。
+
+可选的引擎命令 `node scripts/sync-project-content.mjs --content-root /path/to/content` 同步公开仓库的 README 及 `docs/` 下全部 Markdown，保留子目录，匹配中英文并生成系列。配置位于 `src/data/project-sources.json`；`projects` 每项指定 `id`、`repository`（`owner/repo`）、固定的 40 位提交 `revision`、`files`（`zh`/`en` README 路径）和可选的 `routes` 映射。仅导入 README 时设置 `docs: false`。来源全部下载成功后才更新快照；构建和页面访问使用已提交的本地内容。

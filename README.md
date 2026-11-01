@@ -89,4 +89,10 @@ You can later point SyndiRelay at this same content repository. No second `blog-
 **License:** Original template scaffolding/configuration is [MIT](LICENSE). Demo articles, photos, illustrations and other media are **not automatically MIT-licensed**; see [COPYRIGHT.md](COPYRIGHT.md). Replace demo materials and fictional data before publishing. Never commit secrets, API keys, cookies or sensitive draft content to a public repository.
 
 
-Project introductions belong in `src/content/projects/` (translations in `project-translations/en/`). Standalone manuals belong in `documents/`, grouped by a series with `kind: documentation`, `project`, and ordered `relatedDocuments`. See `sample-project-docs` for a bilingual example. These documents are separate from article lists and RSS. Requires an engine version with documentation-series support.
+
+
+### Project README and docs
+
+Keep each project in `src/content/projects/<id>/`: `project.md` holds the project metadata, `README_ZH.md` and `README.md` hold the bilingual introduction, `docs/` holds chapters (English counterparts in `docs/en/`), and `series.md` holds the series metadata and chapter order. README is the first series entry. Projects, docs and ordinary articles share `ReadingLayout`, the series outline, table of contents, reading controls and chapter navigation; only their content storage and feed membership differ. Projects/docs stay out of ordinary article lists and article RSS.
+
+The optional engine command `node scripts/sync-project-content.mjs --content-root /path/to/content` syncs README files and all Markdown files in a public repository’s `docs/`, preserves subdirectories, pairs translations and generates the series. Its manifest is `src/data/project-sources.json`; each `projects` entry specifies `id`, `repository` (`owner/repo`), a pinned 40-character `revision`, `files` (`zh`/`en` README paths), and optional `routes` mappings. Set `docs: false` for a README-only import. Sources are fetched before snapshots change; page requests and builds use committed local content.

@@ -18,4 +18,4 @@ The series links to its project using `project: sample-project`.
 
 ## Content isolation
 
-Documents live in `src/content/documents/`; project bodies live in `src/content/projects/`. Neither is added to article lists or article RSS.
+READMEs and documents live together in `src/content/projects/<project>/`, with manuals in its `docs/` subdirectory. Neither is added to article lists or article RSS.

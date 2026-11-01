@@ -15,5 +15,3 @@ translations:
     title: "Sample Project"
     description: "A minimal project used by the content template."
 ---
-
-This project exists only to demonstrate the Projects content type.

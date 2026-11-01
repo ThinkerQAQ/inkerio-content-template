@@ -18,6 +18,7 @@ jobs:
       - uses: actions/checkout@v6
         with:
           repository: ThinkerQAQ/inkerio
+          ref: 4cb681a89f16a63d7cce614420cd9df91d96de0b
           path: engine
       - uses: actions/setup-node@v6
         with:

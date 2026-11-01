@@ -16,4 +16,4 @@ updatedAt: '2026-11-01'
 
 ## 内容隔离
 
-文档存储在 `src/content/documents/`，项目正文存储在 `src/content/projects/`；两者都不会加入普通文章列表和文章 RSS。
+项目 README 和文档共同存储在 `src/content/projects/<project>/`，文档位于其 `docs/` 子目录；两者都不会加入普通文章列表和文章 RSS。

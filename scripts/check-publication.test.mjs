@@ -30,3 +30,9 @@ test("does not reject legitimate personal photographs and Markdown filenames", (
     "public/media/life/2026-my-city/01.webp",
   ]), []);
 });
+
+// Project-local README/docs examples must remain detectable after the directory migration.
+test('blocks nested sample project READMEs and docs', () => {
+  const files = ['src/content/projects/sample-project/README.md', 'src/content/projects/sample-project/docs/en/setup.md', 'src/content/projects/my-tool/docs/setup.md'];
+  assert.deepEqual(detectDemoPublication(files), files.slice(0, 2));
+});
