@@ -26,6 +26,9 @@ jobs:
         working-directory: engine
       - run: node scripts/assemble-content.mjs --content-root ../content
         working-directory: engine
+      - name: Validate site configuration helper
+        run: node --test scripts/configure-site.test.mjs
+        working-directory: content
       - run: npm run check
         working-directory: engine
       - name: Check license and synthetic records

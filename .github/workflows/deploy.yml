@@ -1,0 +1,114 @@
+name: Deploy my Inkerio blog to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "src/**"
+      - "public/**"
+      - "site.config.json"
+      - "scripts/configure-site.mjs"
+      - ".github/workflows/deploy.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: inkerio-pages-${{ github.ref }}
+  cancel-in-progress: false
+
+env:
+  ASTRO_TELEMETRY_DISABLED: 1
+
+jobs:
+  build:
+    # Only created blogs should deploy; not the original example template.
+    if: github.repository != 'ThinkerQAQ/inkerio-content-template'
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - name: Checkout my content and configuration
+        uses: actions/checkout@v6
+        with:
+          path: content
+          persist-credentials: false
+
+      - name: Checkout pinned Inkerio engine
+        uses: actions/checkout@v6
+        with:
+          repository: ThinkerQAQ/inkerio
+          ref: 2ec4e4cab9c67c7da57e6643484a314dcac31e98
+          path: engine
+          persist-credentials: false
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: engine/package-lock.json
+
+      - name: Setup Java for diagrams
+        uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      - name: Install diagram and browser prerequisites
+        run: sudo apt-get update && sudo apt-get install -y graphviz fonts-noto-cjk libnspr4 libnss3 libasound2t64
+
+      - name: Configure headless Mermaid rendering
+        run: |
+          echo '{"args":["--no-sandbox","--disable-setuid-sandbox"]}' > "$RUNNER_TEMP/mermaid-puppeteer.json"
+          echo "MERMAID_PUPPETEER_CONFIG_FILE=$RUNNER_TEMP/mermaid-puppeteer.json" >> "$GITHUB_ENV"
+
+      - name: Install engine dependencies
+        working-directory: engine
+        run: npm ci
+
+      - name: Configure Inkerio from my site settings
+        run: node content/scripts/configure-site.mjs --engine engine --repository "$GITHUB_REPOSITORY"
+
+      - name: Assemble my content
+        working-directory: engine
+        run: node scripts/assemble-content.mjs --content-root ../content
+
+      - name: Typecheck
+        working-directory: engine
+        run: npm run check
+
+      - name: Build static site
+        working-directory: engine
+        run: npm run build
+
+      - name: Verify build output
+        run: |
+          test -s engine/dist/index.html
+          test -s engine/dist/en/index.html
+          test -s engine/dist/sitemap-index.xml
+          test -s engine/dist/rss.xml
+          test -s engine/dist/pagefind/pagefind-entry.json
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: engine/dist
+
+  deploy:
+    if: github.repository != 'ThinkerQAQ/inkerio-content-template'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy website
+        id: deployment
+        uses: actions/deploy-pages@v4
